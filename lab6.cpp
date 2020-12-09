@@ -2,27 +2,30 @@
 #include <cmath>
 using namespace std;
 
-int n,
-    k;
-
-float a,
-      result,
-      y,
-      prev_y;
 float newton(int, int, float);
 
 int main()
 {
+    int n,
+    k;
+
+    float a,
+          result;
+
     cout << "Input n(int), a(float)" << endl;
     cin >> n >> a;
     result = (newton(n, 3, a) - newton(n, 6, (a*a+1)))/(1+newton(n, 7, (3+a)));
-    cout << result;
+    cout << result << endl;
     
+    system("pause");
     return 0;
 }
 
 float newton(int n, int k, float a)
 {
+    float y,
+          prev_y;
+          
     prev_y = a;
     for(int i=0; i<=n; i++)
     {
