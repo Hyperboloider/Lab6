@@ -15,9 +15,6 @@ int main()
 {
     cout << "Input n(int), a(float)" << endl;
     cin >> n >> a;
-    cout << "newton(n, 3, a)  " << newton(n, 3, a) << endl;
-    cout << "newton(n, 6, (a*a+1))  " << newton(n, 6, (a*a+1)) << endl;
-    cout << "newton(n, 7, (3+a))  " << newton(n, 7, (3+a)) << endl;
     result = (newton(n, 3, a) - newton(n, 6, (a*a+1)))/(1+newton(n, 7, (3+a)));
     cout << result;
     
